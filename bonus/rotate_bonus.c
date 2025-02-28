@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   rotate_bonus.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ynadime <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: ynadime <ynadime@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/24 16:57:37 by ynadime           #+#    #+#             */
-/*   Updated: 2025/02/24 16:57:38 by ynadime          ###   ########.fr       */
+/*   Updated: 2025/02/27 15:12:26 by ynadime          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "checker.h"
+#include "checker_bonus.h"
 
 void	rotate(t_stack **head)
 {

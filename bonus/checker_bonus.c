@@ -1,16 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   checker.c                                          :+:      :+:    :+:   */
+/*   checker_bonus.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ynadime <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: ynadime <ynadime@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/24 16:58:39 by ynadime           #+#    #+#             */
-/*   Updated: 2025/02/24 16:58:40 by ynadime          ###   ########.fr       */
+/*   Updated: 2025/02/27 15:12:16 by ynadime          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "checker.h"
+#include "checker_bonus.h"
 
 char	**split_arguments(char **av)
 {
@@ -58,7 +58,7 @@ void	add_to_stack(t_stack *head, int value, char **tokens)
 	head->next = new;
 }
 
-void	innit_stack_a(t_stack **stack_a, char **tokens)
+void	init_stack_a(t_stack **stack_a, char **tokens)
 {
 	size_t	i;
 
@@ -101,7 +101,8 @@ int	main(int ac, char **av)
 		write(2, "Error\n", 6);
 		exit(1);
 	}
-	innit_stack_a(&stack_a, tokens);
+	check_if_has_overflow(tokens);
+	init_stack_a(&stack_a, tokens);
 	stack_b = NULL;
 	free_tokens(tokens);
 	read_input(&stack_a, &stack_b);

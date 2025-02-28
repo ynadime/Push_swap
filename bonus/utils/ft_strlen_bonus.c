@@ -1,31 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_strlen_bonus.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ynadime <ynadime@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/29 11:39:42 by ynadime           #+#    #+#             */
-/*   Updated: 2025/02/24 13:52:42 by ynadime          ###   ########.fr       */
+/*   Created: 2025/02/25 08:38:02 by ynadime           #+#    #+#             */
+/*   Updated: 2025/02/27 15:13:18 by ynadime          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../checker.h"
+#include "../checker_bonus.h"
 
-char	*ft_strdup(const char *s1)
+size_t	ft_strlen(const char *s)
 {
 	size_t	i;
-	char	*str;
 
 	i = 0;
-	str = (char *)malloc((ft_strlen(s1) + 1) * sizeof(char));
-	if (!str)
-		return (NULL);
-	while (s1[i])
-	{
-		str[i] = s1[i];
+	while (s[i])
 		i++;
-	}
-	str[i] = '\0';
-	return (str);
+	return (i);
 }

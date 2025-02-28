@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   read_input_bonus.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ynadime <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: ynadime <ynadime@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/24 16:57:05 by ynadime           #+#    #+#             */
-/*   Updated: 2025/02/24 16:57:06 by ynadime          ###   ########.fr       */
+/*   Updated: 2025/02/27 15:12:31 by ynadime          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "checker.h"
+#include "checker_bonus.h"
 
 size_t	is_sorted(t_stack *stack)
 {
@@ -32,7 +32,7 @@ void	cleanup_and_exit(t_stack **stack_a, t_stack **stack_b, char *input)
 	exit(1);
 }
 
-void	execute_operation(t_stack **stack_a, t_stack **stack_b, char *input)
+void	handle_input(t_stack **stack_a, t_stack **stack_b, char *input)
 {
 	if (ft_strcmp(input, "pa\n") == 0)
 		pa(stack_a, stack_b);
@@ -68,7 +68,7 @@ void	read_input(t_stack **stack_a, t_stack **stack_b)
 	input = get_next_line(0);
 	while (input)
 	{
-		execute_operation(stack_a, stack_b, input);
+		handle_input(stack_a, stack_b, input);
 		input = get_next_line(0);
 	}
 	if (is_sorted(*stack_a) && !*stack_b)

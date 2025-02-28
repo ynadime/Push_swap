@@ -6,14 +6,14 @@
 /*   By: ynadime <ynadime@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/26 16:20:55 by ynadime           #+#    #+#             */
-/*   Updated: 2025/02/24 16:53:10 by ynadime          ###   ########.fr       */
+/*   Updated: 2025/02/27 15:11:14 by ynadime          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef GET_NEXT_LINE_H
 # define GET_NEXT_LINE_H
 
-# include "../checker.h"
+# include "../checker_bonus.h"
 # include <stdlib.h>
 # include <unistd.h>
 

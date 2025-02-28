@@ -6,7 +6,7 @@
 /*   By: ynadime <ynadime@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/23 18:19:29 by ynadime           #+#    #+#             */
-/*   Updated: 2025/02/24 14:27:04 by ynadime          ###   ########.fr       */
+/*   Updated: 2025/02/27 15:30:09 by ynadime          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,8 +33,8 @@ size_t				ft_strlcpy(char *dst, const char *src, size_t dstsize);
 size_t				ft_strlen(const char *s);
 size_t				arg_has_no_digits(char **av);
 size_t				has_invalid_argument(char **tokens);
-size_t				has_overflow(char **tokens);
 size_t				has_duplicates(char **tokens);
+void				check_if_has_overflow(char **tokens);
 void				free_stack(t_stack **stack);
 void				free_tokens(char **tokens);
 void				sort(t_stack **stack_a, t_stack **stack_b);

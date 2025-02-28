@@ -1,17 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   checker.h                                          :+:      :+:    :+:   */
+/*   checker_bonus.h                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ynadime <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: ynadime <ynadime@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/24 16:58:01 by ynadime           #+#    #+#             */
-/*   Updated: 2025/02/24 16:58:02 by ynadime          ###   ########.fr       */
+/*   Updated: 2025/02/27 15:29:57 by ynadime          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef CHECKER_H
-# define CHECKER_H
+#ifndef CHECKER_BONUS_H
+# define CHECKER_BONUS_H
 
 # include "GNL/get_next_line.h"
 # include <limits.h>
@@ -35,8 +35,8 @@ size_t				ft_strlen(const char *s);
 int					ft_strncmp(const char *s1, const char *s2, size_t n);
 size_t				arg_has_no_digits(char **av);
 size_t				has_invalid_argument(char **tokens);
-size_t				has_overflow(char **tokens);
 size_t				has_duplicates(char **tokens);
+void				check_if_has_overflow(char **tokens);
 void				free_stack(t_stack **stack);
 void				free_tokens(char **tokens);
 void				assign_indexes(t_stack **stack, int *array, size_t size);

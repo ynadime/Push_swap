@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   swap_bonus.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ynadime <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: ynadime <ynadime@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/24 16:57:46 by ynadime           #+#    #+#             */
-/*   Updated: 2025/02/24 16:57:48 by ynadime          ###   ########.fr       */
+/*   Updated: 2025/02/27 15:12:22 by ynadime          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "checker.h"
+#include "checker_bonus.h"
 
 void	swap(t_stack **stack)
 {
@@ -39,6 +39,5 @@ void	ss(t_stack **stack_a, t_stack **stack_b)
 	{
 		swap(stack_a);
 		swap(stack_b);
-		write(1, "ss\n", 3);
 	}
 }

@@ -3,14 +3,23 @@
 /*                                                        :::      ::::::::   */
 /*   handle_errors.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ynadime <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: ynadime <ynadime@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/23 18:18:00 by ynadime           #+#    #+#             */
-/*   Updated: 2025/02/23 18:18:01 by ynadime          ###   ########.fr       */
+/*   Updated: 2025/02/27 15:07:37 by ynadime          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
+
+void	check_if_has_overflow(char **tokens)
+{
+	int	i;
+
+	i = 0;
+	while (tokens[i])
+		ft_atoi(tokens[i++], tokens);
+}
 
 size_t	arg_has_no_digits(char **av)
 {
@@ -47,13 +56,12 @@ size_t	has_invalid_argument(char **tokens)
 		j = 0;
 		if (tokens[i][j] == '+' || tokens[i][j] == '-')
 			j++;
+		if (!tokens[i][j])
+			return (free_tokens(tokens), 1);
 		while (tokens[i][j])
 		{
 			if (tokens[i][j] < '0' || tokens[i][j] > '9')
-			{
-				free_tokens(tokens);
-				return (1);
-			}
+				return (free_tokens(tokens), 1);
 			j++;
 		}
 		i++;
@@ -63,8 +71,8 @@ size_t	has_invalid_argument(char **tokens)
 
 size_t	has_duplicates(char **tokens)
 {
-	int		i;
-	int		j;
+	int	i;
+	int	j;
 
 	i = 0;
 	while (tokens[i])

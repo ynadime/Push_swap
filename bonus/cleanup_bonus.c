@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   cleanup_bonus.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ynadime <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: ynadime <ynadime@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/24 16:56:39 by ynadime           #+#    #+#             */
-/*   Updated: 2025/02/24 16:56:40 by ynadime          ###   ########.fr       */
+/*   Updated: 2025/02/27 15:12:40 by ynadime          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "checker.h"
+#include "checker_bonus.h"
 
 void	free_tokens(char **tokens)
 {
